@@ -1,0 +1,19 @@
+{
+  "name": "pokeresume",
+  "version": "1.0.0",
+  "description": "A gamified version of my resume in the set Poke-universe!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mokezonline/pokeResume.git"
+  },
+  "author": "Zachary Cush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mokezonline/pokeResume/issues"
+  },
+  "homepage": "https://github.com/mokezonline/pokeResume#readme"
+}
