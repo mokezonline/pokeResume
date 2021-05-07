@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Pokemon Pixel Font Regular";
+  src: url("./assets/fonts/pokefont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Pokemon Pixel Font Regular";
+}
