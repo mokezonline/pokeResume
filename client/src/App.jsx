@@ -11,8 +11,8 @@ const MainWrapper = styled.div`
 
 const Background = styled.img`
   position: absolute;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   pointer-events: none;
   z-index: -1;
 `;
@@ -26,6 +26,26 @@ const Greeting = styled.h1`
   padding: 2vh;
 `;
 
+const Message = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 80vw;
+  height: 90vh;
+  background-color: #ffffff;
+  z-index: 1;
+  border-radius: 15px;
+`;
+
+const PokeButton4 = styled.div`
+  position: absolute;
+  background-color: red;
+  width: 2vw;
+  height: 3vh;
+  margin-top: 21.4vh;
+  margin-right: 43.1vw;
+`;
+
 const App = () => {
   const { show, RenderModal } = useModal();
 
@@ -37,9 +57,11 @@ const App = () => {
         Here is an interactive resume that I've built. 
         Click on the Pokeballs to learn more about me!
       </Greeting>
-      <button onClick={show}>bleh</button>
+      <PokeButton4 onClick={show}></PokeButton4>
       <RenderModal>
-        <p>blah blah</p>
+        <Message>
+          <p>blah blah</p>
+        </Message>
       </RenderModal>
       <div id='modal-root' />
     </MainWrapper>
