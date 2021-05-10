@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import bgimg from '../../assets/bgimg.png';
 import { useModal } from './useModal';
+import bgimg from '../../assets/bgimg.png';
+import ResHighlights from './ResHighlights';
+import ContactInfo from './ContactInfo';
 
 const MainWrapper = styled.div`
   display: flex;
@@ -32,7 +34,7 @@ const Message = styled.div`
   justify-content: center;
   width: 80vw;
   height: 90vh;
-  background-color: #ffffff;
+  background-color: #e1f8fa;
   z-index: 1;
   border-radius: 15px;
 `;
@@ -94,12 +96,12 @@ const App = () => {
       </RenderModalA>
       <RenderModalB>
         <Message>
-          <p>I am B</p>
+          <ContactInfo />
         </Message>
       </RenderModalB>
       <RenderModalC>
         <Message>
-          <p>I am C</p>
+        <ResHighlights />
         </Message>
       </RenderModalC>
       <RenderModalD>

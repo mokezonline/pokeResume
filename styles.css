@@ -10,6 +10,9 @@ body {
   padding: 0;
 }
 
-h1 {
+h1,
+h2,
+li,
+a {
   font-family: "Pokemon Pixel Font Regular";
 }
