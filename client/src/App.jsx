@@ -5,6 +5,7 @@ import { useModal } from './useModal';
 import bgimg from '../../assets/bgimg.png';
 import ResHighlights from './ResHighlights';
 import ContactInfo from './ContactInfo';
+import CoverLetter from './CoverLetter';
 
 const MainWrapper = styled.div`
   display: flex;
@@ -83,7 +84,7 @@ const App = () => {
       <Greeting>
         Hello Gather Town Team! My name is Zach and I am a passionate Frontend Engineer. 
         Here is an interactive resume that I've built in the spirit of Gather Town! 
-        Click on the Pokeballs to learn more about me.
+        Click on the Pokeballs to learn more about me and my work.
       </Greeting>
       <PokeButton1 onClick={showA}></PokeButton1>
       <PokeButton2 onClick={showB}></PokeButton2>
@@ -106,7 +107,7 @@ const App = () => {
       </RenderModalC>
       <RenderModalD>
         <Message>
-          <p>I am D</p>
+          <CoverLetter />
         </Message>
       </RenderModalD>
       <div id='modal-root' />

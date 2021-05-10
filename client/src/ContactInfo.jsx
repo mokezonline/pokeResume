@@ -36,6 +36,11 @@ const Link = styled.a`
   margin-top: 1.5vw;
 `;
 
+const ConnectMessage = styled.h2`
+  font-size: 5vh;
+  margin-top: 20vh;
+`;
+
 const ContactInfo = () => (
   <ContactInfoWrapper>
     <h1>Contact Info and Links</h1>
@@ -57,9 +62,10 @@ const ContactInfo = () => (
       <Link href="https://github.com/mokezonline">https://github.com/mokezonline</Link>
     </InfoWrapper>
     <InfoWrapper>
-      <Description>The code for this project!</Description>
+      <Description>The code for this project - </Description>
       <Link href="https://github.com/mokezonline/pokeResume">PokeResume!</Link>
     </InfoWrapper>
+    <ConnectMessage>Let's connect and chat about why I would be a great fit for the Gather Town Team!</ConnectMessage>
   </ContactInfoWrapper>
 
 );

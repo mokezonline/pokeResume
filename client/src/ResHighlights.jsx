@@ -38,7 +38,7 @@ const Gif = styled.img`
 
 const ResHighlights = () => (
   <LibraFXWrapper>
-    <h1>Clothing Product Page LibraFX</h1>
+    <h1>Frontend Sample - Clothing Product Page LibraFX</h1>
     <FjordsBanner src={thumbnail} />
     <ul>
       <Bullets>Utilized React to leverage conditional rendering and styled components to provide a seamless user experience</Bullets>
