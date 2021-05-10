@@ -6,6 +6,7 @@ import bgimg from '../../assets/bgimg.png';
 import ResHighlights from './ResHighlights';
 import ContactInfo from './ContactInfo';
 import CoverLetter from './CoverLetter';
+import EasterEgg from './EasterEgg';
 
 const MainWrapper = styled.div`
   display: flex;
@@ -40,7 +41,7 @@ const Message = styled.div`
   border-radius: 15px;
 `;
 
-const PokeButton1 = styled.div`
+const PokeButtonA = styled.div`
   position: absolute;
   width: 2.5vw;
   height: 3.5vh;
@@ -48,7 +49,7 @@ const PokeButton1 = styled.div`
   margin-right: 76vw;
 `;
 
-const PokeButton2 = styled.div`
+const PokeButtonB = styled.div`
   position: absolute;
   width: 2.5vw;
   height: 3.5vh;
@@ -56,7 +57,7 @@ const PokeButton2 = styled.div`
   margin-right: 56.3vw;
 `;
 
-const PokeButton3 = styled.div`
+const PokeButtonC = styled.div`
   position: absolute;
   width: 2.5vw;
   height: 3.5vh;
@@ -64,7 +65,7 @@ const PokeButton3 = styled.div`
   margin-right: 49.7vw;
 `;
 
-const PokeButton4 = styled.div`
+const PokeButtonD = styled.div`
   position: absolute;
   width: 2.5vw;
   height: 3.5vh;
@@ -86,13 +87,13 @@ const App = () => {
         Here is an interactive resume that I've built in the spirit of Gather Town! 
         Click on the Pokeballs to learn more about me and my work.
       </Greeting>
-      <PokeButton1 onClick={showA}></PokeButton1>
-      <PokeButton2 onClick={showB}></PokeButton2>
-      <PokeButton3 onClick={showC}></PokeButton3>
-      <PokeButton4 onClick={showD}></PokeButton4>
+      <PokeButtonA onClick={showA}></PokeButtonA>
+      <PokeButtonB onClick={showB}></PokeButtonB>
+      <PokeButtonC onClick={showC}></PokeButtonC>
+      <PokeButtonD onClick={showD}></PokeButtonD>
       <RenderModalA>
         <Message>
-          <p>I am A</p>
+          <EasterEgg />
         </Message>
       </RenderModalA>
       <RenderModalB>
