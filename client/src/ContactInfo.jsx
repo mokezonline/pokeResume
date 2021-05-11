@@ -11,11 +11,26 @@ const ContactInfoWrapper = styled.div`
 
 const Headshot = styled.img`
   position: absolute;
-  width: 12vw;
+  width: 9vw;
   height: 25vh;
   border-radius: 50%;
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-left: -60vw;
+  border: solid black;
+  border-width: .2vw;
+`;
+
+const InfoBorder = styled.div`
+  display: flex;
+  width: 37vw;
+  flex-direction: column;
+  margin-top: 17vh;
+  padding: 2vh;
+  border: solid black;
+  border-width: .2vw;
+  border-radius: 5px;
+  padding-bottom: 6vh;
+  padding-left: 4vw;
 `;
 
 const InfoWrapper = styled.div`
@@ -23,16 +38,16 @@ const InfoWrapper = styled.div`
   width: 40vw;
   height: 3.7vh;
   justify-content: flex-start;
-  margin-bottom: 3vh;
+  margin-bottom: 1vh;
 `;
 
 const Description = styled.h2`
-  font-size: 3.5vh;
+  font-size: 4vh;
   margin-right: 1vw;
 `;
 
 const Link = styled.a`
-  font-size: 3.5vh;
+  font-size: 4vh;
   margin-top: 1.5vw;
 `;
 
@@ -45,6 +60,7 @@ const ContactInfo = () => (
   <ContactInfoWrapper>
     <h1>Contact Info and Links</h1>
     <Headshot src={headshot} />
+    <InfoBorder>
     <InfoWrapper>
       <Description>Phone -</Description>
       <Description>510 - 833 - 3923</Description>
@@ -55,16 +71,17 @@ const ContactInfo = () => (
     </InfoWrapper>
     <InfoWrapper>
       <Description>LinkedIn - </Description>
-      <Link href="https://www.linkedin.com/in/zach-cush/">https://www.linkedin.com/in/zach-cush/</Link>
+      <Link href="https://www.linkedin.com/in/zach-cush/" target="_blank">https://www.linkedin.com/in/zach-cush/</Link>
     </InfoWrapper>
     <InfoWrapper>
       <Description>Github - </Description>
-      <Link href="https://github.com/mokezonline">https://github.com/mokezonline</Link>
+      <Link href="https://github.com/mokezonline" target="_blank">https://github.com/mokezonline</Link>
     </InfoWrapper>
     <InfoWrapper>
       <Description>The code for this project - </Description>
-      <Link href="https://github.com/mokezonline/pokeResume">PokeResume!</Link>
+      <Link href="https://github.com/mokezonline/pokeResume" target="_blank">PokeResume!</Link>
     </InfoWrapper>
+    </InfoBorder>
     <ConnectMessage>Let's connect and chat about why I would be a great fit for the Gather Town Team!</ConnectMessage>
   </ContactInfoWrapper>
 

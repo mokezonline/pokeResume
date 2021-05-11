@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { useModal } from './useModal';
@@ -19,6 +19,15 @@ const Background = styled.img`
   height: 100vh;
   pointer-events: none;
   z-index: -1;
+  filter: blur(${
+  ({ blur }) => {
+    if (blur === true) {
+      return 5;
+    } else {
+      return 0;
+    }
+  }
+}px);
 `;
 
 const Greeting = styled.h1`
@@ -28,6 +37,7 @@ const Greeting = styled.h1`
   background-color: #f5efef;
   border-radius: 20px;
   padding: 2vh;
+  font-size: 3.5vh;
 `;
 
 const Message = styled.div`
@@ -47,6 +57,7 @@ const PokeButtonA = styled.div`
   height: 3.5vh;
   margin-top: 6.5vh;
   margin-right: 76vw;
+  cursor: pointer;
 `;
 
 const PokeButtonB = styled.div`
@@ -55,6 +66,7 @@ const PokeButtonB = styled.div`
   height: 3.5vh;
   margin-top: 21.3vh;
   margin-right: 56.3vw;
+  cursor: pointer;
 `;
 
 const PokeButtonC = styled.div`
@@ -63,6 +75,7 @@ const PokeButtonC = styled.div`
   height: 3.5vh;
   margin-top: 21.3vh;
   margin-right: 49.7vw;
+  cursor: pointer;
 `;
 
 const PokeButtonD = styled.div`
@@ -71,6 +84,7 @@ const PokeButtonD = styled.div`
   height: 3.5vh;
   margin-top: 21.3vh;
   margin-right: 43.1vw;
+  cursor: pointer;
 `;
 
 const App = () => {
@@ -79,34 +93,43 @@ const App = () => {
   const { show: showC, RenderModal: RenderModalC } = useModal();
   const { show: showD, RenderModal: RenderModalD } = useModal();
 
+  const [blur, setBlur] = useState(false);
+
+  const onOpen = () => {
+    setBlur(true);
+  }
+  
+  const onClose = () => {
+    setBlur(false);
+  }
   return (
     <MainWrapper>
-      <Background src={bgimg} />
+      <Background src={bgimg} blur={blur}/>
       <Greeting>
         Hello Gather Town Team! My name is Zach and I am a passionate Frontend Engineer. 
-        Here is an interactive resume that I've built in the spirit of Gather Town! 
+        Here is an interactive resume that I've built in the spirit of Gather Town!
         Click on the Pokeballs to learn more about me and my work.
       </Greeting>
-      <PokeButtonA onClick={showA}></PokeButtonA>
-      <PokeButtonB onClick={showB}></PokeButtonB>
-      <PokeButtonC onClick={showC}></PokeButtonC>
-      <PokeButtonD onClick={showD}></PokeButtonD>
-      <RenderModalA>
+      <PokeButtonA onClick={() => {showA(); onOpen();}}></PokeButtonA>
+      <PokeButtonB onClick={() => {showB(); onOpen();}}></PokeButtonB>
+      <PokeButtonC onClick={() => {showC(); onOpen();}}></PokeButtonC>
+      <PokeButtonD onClick={() => {showD(); onOpen();}}></PokeButtonD>
+      <RenderModalA onClose={onClose}>
         <Message>
           <EasterEgg />
         </Message>
       </RenderModalA>
-      <RenderModalB>
+      <RenderModalB onClose={onClose}>
         <Message>
           <ContactInfo />
         </Message>
       </RenderModalB>
-      <RenderModalC>
+      <RenderModalC onClose={onClose}>
         <Message>
         <ResHighlights />
         </Message>
       </RenderModalC>
-      <RenderModalD>
+      <RenderModalD onClose={onClose}>
         <Message>
           <CoverLetter />
         </Message>

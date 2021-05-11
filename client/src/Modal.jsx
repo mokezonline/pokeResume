@@ -9,7 +9,7 @@ const ModalWrapper = styled.div`
 
 const Xbutton = styled.button`
   position: absolute;
-  margin-top: 1.5vh;
+  margin-top: 3vh;
   margin-left: 75.3vw;
   z-index: 2;
   width: 3vw;
@@ -20,16 +20,17 @@ const Xbutton = styled.button`
   border-radius: 5px;
   font-size: 2vh;
   color: #edfbff;
+  cursor: pointer;
 `;
 
-const Modal = React.memo(({ children, closeModal }) => {
+const Modal = React.memo(({ children, closeModal, onClose }) => {
   const domEl = document.getElementById('modal-root');
   if (!domEl) {
     return null;
   }
   return ReactDOM.createPortal(
     <ModalWrapper>
-      <Xbutton onClick={closeModal}>X</Xbutton>
+      <Xbutton onClick={() => {closeModal(); onClose();}}>X</Xbutton>
       {children}
     </ModalWrapper>,
     domEl

@@ -8,9 +8,9 @@ export const useModal = () => {
   const show = () => setIsVisible(true);
   const hide = () => setIsVisible(false);
 
-  const RenderModal = ({ children }) => (
+  const RenderModal = ({ children, onClose }) => (
     <React.Fragment>
-      {isVisible && <Modal closeModal={hide}>{children}</Modal>}
+      {isVisible && <Modal closeModal={hide} onClose={onClose}>{children}</Modal>}
     </React.Fragment>
   );
 

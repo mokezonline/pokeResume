@@ -19,12 +19,20 @@ const Chicken = styled.p`
   font-size: 3.5vh;
 `;
 
+const FullResume = styled.a`
+  font-size: 3.5vh;
+  margin-bottom: 1vh;
+`;
+
 const EasterEgg = () => (
   <EasterEggWrapper>
     <h1>Easter Egg!</h1>
     <Chicken>
-      I love to make creative projects, and I wanted to put a little dance clip in here, but I chickened out!
+      I wanted to put one of my dance clips in here, but I chickened out!
     </Chicken>
+    <FullResume href="https://docs.google.com/document/d/1nIvniyWpB_vjSdUlLIXq2vY3qA3VJmTcMOwmY-FqaA4/edit?usp=sharing" target="_blank">
+      Click Here For Standard Resume
+    </FullResume>
     <Pikachu src={pikachu}/>
   </EasterEggWrapper>
 );
