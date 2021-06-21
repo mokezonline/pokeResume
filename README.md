@@ -6,7 +6,7 @@
 
 ## Currently Deployed Here:
 
-[a link](http://ec2-52-53-240-22.us-west-1.compute.amazonaws.com:3000/)
+[Deployed Project](http://ec2-52-53-240-22.us-west-1.compute.amazonaws.com:3000/)
 
 ## Splash Page
 
